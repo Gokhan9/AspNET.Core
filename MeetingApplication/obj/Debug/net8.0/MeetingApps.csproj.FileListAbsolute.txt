@@ -1,0 +1,84 @@
+C:\Users\Gökhan\MeetingApps\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Gökhan\MeetingApps\bin\Debug\net8.0\appsettings.json
+C:\Users\Gökhan\MeetingApps\bin\Debug\net8.0\MeetingApps.exe
+C:\Users\Gökhan\MeetingApps\bin\Debug\net8.0\MeetingApps.deps.json
+C:\Users\Gökhan\MeetingApps\bin\Debug\net8.0\MeetingApps.runtimeconfig.json
+C:\Users\Gökhan\MeetingApps\bin\Debug\net8.0\MeetingApps.dll
+C:\Users\Gökhan\MeetingApps\bin\Debug\net8.0\MeetingApps.pdb
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.AssemblyInfoInputs.cache
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.AssemblyInfo.cs
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.csproj.CoreCompileInputs.cache
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\staticwebassets\msbuild.MeetingApps.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\staticwebassets\msbuild.build.MeetingApps.props
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MeetingApps.props
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MeetingApps.props
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\scopedcss\bundle\MeetingApps.styles.css
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.dll
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\refint\MeetingApps.dll
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.pdb
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.genruntimeconfig.cache
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\ref\MeetingApps.dll
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.RazorAssemblyInfo.cache
+C:\Users\Gökhan\MeetingApps\obj\Debug\net8.0\MeetingApps.RazorAssemblyInfo.cs
+C:\Users\Gökhan\MeetingApps\bin\Debug\net8.0\libman.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\bin\Debug\net8.0\appsettings.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\bin\Debug\net8.0\libman.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\bin\Debug\net8.0\MeetingApps.exe
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\bin\Debug\net8.0\MeetingApps.deps.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\bin\Debug\net8.0\MeetingApps.runtimeconfig.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\bin\Debug\net8.0\MeetingApps.dll
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\bin\Debug\net8.0\MeetingApps.pdb
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.AssemblyInfoInputs.cache
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.AssemblyInfo.cs
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.csproj.CoreCompileInputs.cache
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.RazorAssemblyInfo.cache
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.RazorAssemblyInfo.cs
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\staticwebassets\msbuild.MeetingApps.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\staticwebassets\msbuild.build.MeetingApps.props
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MeetingApps.props
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MeetingApps.props
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\scopedcss\bundle\MeetingApps.styles.css
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.dll
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\refint\MeetingApps.dll
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.pdb
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\MeetingApps.genruntimeconfig.cache
+C:\Users\Gökhan\OneDrive\Desktop\Dotnet Projeleri\MeetingApps\obj\Debug\net8.0\ref\MeetingApps.dll
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\bin\Debug\net8.0\appsettings.json
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\bin\Debug\net8.0\libman.json
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\bin\Debug\net8.0\MeetingApps.exe
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\bin\Debug\net8.0\MeetingApps.deps.json
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\bin\Debug\net8.0\MeetingApps.runtimeconfig.json
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\bin\Debug\net8.0\MeetingApps.dll
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\bin\Debug\net8.0\MeetingApps.pdb
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.AssemblyInfoInputs.cache
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.AssemblyInfo.cs
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.csproj.CoreCompileInputs.cache
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.RazorAssemblyInfo.cache
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.RazorAssemblyInfo.cs
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\staticwebassets\msbuild.MeetingApps.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\staticwebassets\msbuild.build.MeetingApps.props
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MeetingApps.props
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MeetingApps.props
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\scopedcss\bundle\MeetingApps.styles.css
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.dll
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\refint\MeetingApps.dll
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.pdb
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\MeetingApps.genruntimeconfig.cache
+C:\Users\Gökhan\OneDrive\Desktop\MeetingApplication\obj\Debug\net8.0\ref\MeetingApps.dll

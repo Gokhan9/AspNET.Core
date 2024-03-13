@@ -1,0 +1,408 @@
+Terminal'den Masaüstüne konumlanmak..
+
+cd desktop
+dotnet new web -o MeetingApp --framework net8.0  ( yada ) dotnet new web -o MeetingApp -f net8.0 => New EMPTY
+dotnet new web -o MeetingApp -f net8.0
+
+- Program.cs dosyasını açıp " builder.Services.AddControllersWithViews(); " kodunu aktifleştirmek gerekiyor.
+
+
+
+
+***HOMECONTROLLER DOSYASI***
+
+-- Program.cs'de {controller=home} içerisine yönlendirme yapıyor ancak;
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=index}/{id?}"
+);
+app.Run();
+
+
+using Microsoft.AspNetCore.Mvc;
+
+namespace MeetingApp.Controllers    //Proje Adı
+{
+    public class HomeController: Controller => Projeyi kalıtım yoluyla çalıştırdık. Ampul yandı ve otomatik yukarıya kodu yazdı. (using Microsoft.AspNetCore.Mvc;)
+    {
+        public string Index()
+        {
+            return "Home/Index"
+        }
+    }   
+}
+
+
+
+***MEETINGCONTROLLER DOSYASI***
+
+-- Program.cs dosyası içerisinde {controller=Meeting} yaparak "meeting" içerisine yönlendirdik
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Meeting}/{action=index}/{id?}"  ===> Localhost'u "Meeting" yaptık. Artık karşımıza "Meeting" gelicek.
+);
+app.Run();
+
+
+using Microsoft.AspNetCore.Mvc;
+
+namespace MeetingApp.Controllers
+{
+    public class MeetingController:Controller
+    {
+        public string Index()
+        {
+            return "Meeting/Index";
+        }
+    }
+}
+
+
+
+
+
+*** "Views" adında bir Dosya açtık. İçerisine "Home" ve "Meeting" Klasörü oluşturduk. "Home" içerisinde "Index.cshtml" Dosyası açtık.
+"Meeting" içerisine ise "Index.cshtml", "Apply.cshtml"  ve "List.cshtml" dosyalarını açtık. Burada sayfa linklerine göre işlemler,sonuçlar
+görünücek. 
++Eğer localhost'u "{controller=Home}" yaparsak "Home"'un "Index.cshtml" dosyasını verir.
++Eğer localhost'u "{controller=Meeting}" yaparsak "Meeting"'in "Index.cshtml" dosyasını verir. 
+
+** table>thead>tr>td>tbodytr>td
+
+** settings>json aç ve razor format vscode yaz. 
+İlk bağlantıda ki yeri al
+ 
+"emmet.includeLanguages": {
+    "aspnetcorerazor": "html"
+  },
+  "files.associations": {
+    "*.cshtml": "html"
+  }
+
+
+
+
+***** Shared altında "_Layout2.cshtml" adında bir dosya daha oluşturduk. "LAYOUT" olmasını istemediğimiz kod satırları üzerine şu şekil eklersek
+@{
+    Layout = null;
+}
+		 aşağıda yaptığımız renklendirme,marj ve border tarzı işlemleri uygulamıyacak!!!!!!!!!!
+
+İstediğimiz bir sayfa için "Layout2" içerisinde değişikliğe gidebiliriz.
+Örneğin: *** div.bg-danger.text-white.p-2.text-center
+
+
+
+*** div.bg-primary.text-white.p-2.text-center => Mavi bir zemin, beyaz yazılar, padding, içerik ortalanması.
+*** div.container.mt-3 => İçerik ortalansın köşelerden. "mt-3" üstten biraz boşluk.
+*** .col-lg-6.mx-auto.text-center => 12'lik kolonun 6'sını kullanıcağız. "mx-auto" ile ortaladık.
+*** div.card => Border
+*** div-card-body => Borderlardan içeriye doğru bir padding
+
+
+
+*** "Views" altında "_ViewImports.cshtml" dosyasına yazdık... 
+
+=> @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers Etiket yardımcısı.
+- href="meeting/apply" yerine asp-controller="Meeting" asp-action="Apply" yazıyoruz.
+
+
+
+
+
+
+
+*** Libman = Bootstrap kütüphanesini projeye dahil etme.
+google'da arat: 
+nuget libman => dotnet tool install --global Microsoft.Web.LibraryManager.Cli --version 2.1.175 (global bir paket)
+
+
+
+Terminal'de libman init -p cdnjs
+	    libman install bootstrap@5.3.2 -d wwroot/lib/bootstrap
+
+ÖNEMLİ: Bunları yaptıktan sonra "Program.cs" klasörüne gelip "app.UseStaticFiles();" ve "app.UseRouting();" komutlarını aktifleştirmemiz 
+gerekmekte.
+
+dotnet tool -h		=> Help komutu.
+dotnet tool list	=> Programa yüklü olan yerel toolları görüntüleriz.
+dotnet tool list -g	=> Programa yüklü olan global toolları görüntüleriz
+
+
+
+
+
+
+
+*** ViewBag - ViewData : Birbirlerinden çok farklı değiller.
+
+HomeController.cs ana klasörü altında:::::::::
+
+
+        public IActionResult Index()
+        {
+            int saat = DateTime.Now.Hour; #Anlık saat ayarlaması.
+
+            ViewBag.Selamlama = saat > 12 ? "İyi Günler":"Günaydın"; #Saat 12'den sonrası için "İyi Günler", öncesi için "Günaydın" komutu girer.
+            ViewBag.UserName = "Gökhan";	#"İyi günler":"Günaydın sonrası ne yazdırmak istiyorsa..
+
+
+
+"_Layout.cshtml" klasörü içerisinde <title>Document</title>" yerine "<title>@ViewBag.Title - MeetingApp</title>" komutunu işledik.
+Sonra "Views" klasörü altında ki "Meeting" dosyası içerisinde yer alan 3 dosya içerisinde uygun olan başlığı işledik. AŞAĞIDA:::::
+
+@{
+    ViewBag.Title = "Başvuru Formu";
+}
+
+@{
+    ViewBag.Title = "Toplantı ÖZETİ";
+}
+
+@{
+    ViewBag.Title = "Toplantı KATILIM Listesi";
+}
+
+
+
+
+
+
+*** Models
+
+###### Öncelikle proje içerisinde "Models" adında yeni bir klasör oluşturduk. "Models" klasörü içerisine "MeetingInfo.cs" adında class klasörü
+açtık. Ve aşağıda ki gibi bilgileri içerisine işledik. 
+
+namespace MeetingApps.Models
+{
+    public class MeetingInfo
+    {
+        public int Id { get; set; }
+        public string? Location { get; set; }
+        public DateTime Date { get; set; }
+        public int NumberOfPeople { get; set; }
+    }
+}
+
+######## Bu bilgileri "HomeController" içerisinde AŞAĞIDAKİ GİBİ DETAYLANDIRIYORUZ.
+        
+
+            var MeetingInfo = new MeetingInfo()
+            {
+                Id = 1,
+                Location = "İstanbul, Turkcell",
+                Date = new DateTime(2024, 01, 20, 20, 0, 0),
+                NumberOfPeople = 150 
+            };
+
+	    return View(MeetingInfo);
+	 }
+    }
+}		
+
+##### Views>Home>Index.cshtml yapıyoruz. Bilgiye erişeceğiz. Ayrıca Arayüzda oluşturuyoruz.
+ul.list-group.list-group-flush => Liste tanımlıyoruz div içerisinde.
+
+"_ViewImports.cshtml" içerisine " @using MeetingApp.Models " yazılmalı
+
+TYPE TANIMLAMASI YAPMAYI UNUTMAMALIYIZ !!!!! ====> @model MeetingInfo
+
+@model MeetingInfo
+
+    <h1 class="h4">@ViewBag.Selamlama, @ViewBag.UserName</h1>
+    <p>Toplantı Katılım Durumunuzu Bildiriniz.</p>
+    
+    <div class="card my-2 ">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@Model.Location</li>
+            <li class="list-group-item">@Model.Date.ToString("dd/MM/yyyy HH:mm:ss")'da başlayacak.</li>
+            <li class="list-group-item">@Model.NumberOfPeople Katılımcı yer alıcak.</li>
+         </ul>
+    </div>
+    <a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="Apply">Başvuru Yap</a> 
+
+
+
+
+
+
+*** Kayıt Formu
+
+- Views > Meeting > Apply.cshtml
+
+Home > Index.cshtml	ve	 Meeting > Apply.cshtml,Index.cshtml,List.cshtml içeriklerini "main" içerisine aldık ve ortalamak için "text-center" komutunu kullandık.
+
+
+### BOOTSTRAP Classlarına eklemek.
+class="form-label"
+class="form-control"
+
+
+for bilgisi label-input arası bağlantıyı simgeler! ! ! !
+
+<form action="">
+    <div class="mb-3"> 	=> Alttan 3 MarjinButtom.
+        <label for="Name" class="form-label">Ad Soyad</label>
+        <input type="text" name="Name" id="Name" class="form-control">
+    </div>
+	
+   <div class="mb-3">
+        <label for="Phone" class="form-label">Telefon</label>
+        <input type="text" name="Phone" id="Phone" class="form-control">
+    </div>
+
+   <div class="mb-3">
+    <label for="E-Mail" class="form-label">E-Posta</label>
+    <input type="E-Mail" name="E-Mail" id="E-Mail" class="form-control">
+    </div>
+
+   <div class="mb-3">
+        <label for="WillAttend" class="form-label">Katılım Durumu</label>
+        <select name="WillAttend" id="WillAttend" class="form-select">
+            <option value="true">Evet, Katılacağım!</option>
+            <option value="false">Hayır, Katılmayacağım!</option>
+        </select>
+        
+    </div>
+
+    <button class="btn btn-primary" type="submit">Kaydet</button>
+</form> 
+
+
+
+
+*** HTTP Verbs
+-"MeetingController.cs" Klasörü içerisinde ki class altında yer alan apply,ındex ve list komutları üzerine [HttpGet] metodunu ekledik. Ondan
+sonrasında "Apply.cshtml" içerisinde ki "form action" yerine form method="post" komutunu ekledik.
+
+
+
+
+*** Model Binding => Form üzerinden gelen bilgileri okumak.
+
+"Breakpoint" eklemek, kodları adım adım takip etmeye yarar.
+
+
+
+
+***TagHelpers
+
+-Models klasörü altında "UserInfo.cs" adında bir klasör oluşturduk ve Name,phone,willattend ve email bilgilerini işledik.Sonrasında 
+"apply.cshtml" klasörüne giderek bilgileri "  asp-for="Name" ", Phone gibi komutlarla kısalttık.
+	
+	Öncesi:
+	<label for="Name" class="form-label">Ad Soyad</label>
+        <input type="text" name="Name" id="Name" class="form-control">
+
+	Sonrası:
+        <label asp-for="Name" class="form-label">Ad Soyad</label>
+        <input asp-for="Name" class="form-control">
+
+UserInfo'yu Post içerisinde ki Apply'a ekliyoruz
+	
+	[HttpPost]
+	public IActionResult Apply(UserInfo model)
+        {
+            return View();
+        }
+
+sayfa kaynağına girip inceleyebiliyoruz.
+
+
+
+
+*** Form Bilgilerinin Kayıt Edilmesi
+
+
+
+
+*** Katılanların Listelenmesi
+
+div.card > div.card-body > span
+
+span = alttan üstten boşluk verir.
+
+
+
+
+*** Katılımcı Detay Sayfası
+
+-UserInfo sayfasında "prop Id" komutunu girdik.
+-"Repository.cs" sayfasında "user.Id = Users.Count + 1;" KOMUTUNU Girdik. Kullanıcı giriş yaptıkça artıcak..
+-" return _users.FirstOrDefault(user => user.Id == Id); " Her bir user'a döngü içerisinde erişme imkanı sağlanır. Ve user'ın "Id" ile dışarıdan 
+gönderilen "Id" eşleşiyorsa bulmuş olduğu user'ı geri gönderir.
+-"MeetingController.cs" klasörünü açtık ve an alta şu komutu ekledik. View ekranına komutu gönderebilmek için..
+
+        public IActionResult Details(int Id)
+        {
+            return View(Repository.GetById(Id));
+        }
+
+-Meeting altında "Details.cs" dosyası oluşturduk ve şu komutu ekledik.
+
+@model UserInfo
+@{
+    ViewBag.Title = "Başvuru Detayı";
+}
+
+
+
+*** Form Validations
+- "Başvuru Yap" butonuna tıklandığında kişinin bilgilerini girmesini isteyen bir uyarı gönderiyoruz.
+- "UserInfo.cs" sayfasına [Required] komutunu "Name, Email, Phone ve WillAttend" üzerlerine tanıttık. 
+" using System.ComponentModel.DataAnnotations; "
+
+- [Required]
+  public string? Name { get; set; }   //null değer gelmesi gerekiyor ki "Required" Metodu hatayı gönderebilsin.
+
+- Eğer ki "başvuru yap" kısmında ki bilgileri doldursaydık if bloğu çalışıcaktı fakat doldurmadan işleme devam ettiğimiz için bizi "else"
+bloğuna yönlendirdi.
+
+        [HttpPost]
+        public IActionResult Apply(UserInfo model)
+        {
+            if(ModelState.IsValid){
+
+                Repository.CreateUser(model);
+                ViewBag.UserCount = Repository.Users.Where(info => info.WillAttend == true).Count(); //Gelen her kişi için count ile sayım yapıp pozitifleri bize vericek.
+                return View("Thanks", model);
+
+            } else {
+                return View(model);
+
+- Apply.cshtml" klasörüne gidip " <div asp-validation-summary="All"></div> " metodu ekledik. State içerisinde yer alan hataları göstericek.
+Apply sayfasında ki bilgileri doldurmazsak aşağıdaki hataları verdirir. => " <div asp-validation-summary="All"></div> "
+
+The Name field is required.
+The Phone field is required.
+The EMail field is required.
+The WillAttend field is required.	=> " <option value="">Seçiniz</option> "
+
+
+
+[Required]
+[EmailAddress]			=> Komutunu ekleyip, "Apply.cshtml" klasörüne novalidate komutunu ekledik. Amaç Email kısmına birşey girsek ve email formatını karşılamıyorsa hata verir. ( The EMail field is not a valid e-mail address. )
+public string? EMail { get; set; }
+
+
+
+-- Name, Phone ve E-Mail üzerinde [Required(ErrorMessage = "Ad Alanı Zorunlu!)]
+				  [Required(ErrorMessage ="Zorunlu Alan!")]
+				  [Required(ErrorMessage ="E-Mail Alanı Zorunlu!")]
+				  [EmailAddress(ErrorMessage ="Hatalı E-Mail!")]
+komutlarını girdik ve işlem yapmalarını zorunlu kıldık.
+
+
+Son olarak " wwroot altında "css" klasörü oluşturduk ve oluşturduğumuz klasörün altına "styles.css" dosyasını açtık. "styles.css" dosyası
+içerisine .validation-summary-errors{ color:red; } kodunu ekledik. Bilgi girmediğimiz satırları kırmızı yazı ile yukarıdan uyarıcak. 
+Sonrasında _Layout.cshtml klasörünü açıp bootstrap linkinin altına " <link rel="stylesheet" href="/css/styles.css"> " ekledik ve çalıştırdık.
+
+
+
+.input-validation-error {
+    border: 1px solid #dc3545;
+}
+
+ile bilgi girdiğimiz kutucukları doldurmazsak kırmızı göstericek.
