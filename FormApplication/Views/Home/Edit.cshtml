@@ -1,0 +1,47 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-controller="Home" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="ProductID">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control">
+        <span asp-validation-for="Price"></span>
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="file" name="imageFile" id="imageFile" class="form-control">
+    </div>
+    
+    <div>
+        <img src="~/img/@Model.Image" alt="" style="width: 100px;">
+        <input type="hidden" asp-for="@Model.Image">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CategoryID" class="form-label"></label>
+        <select asp-for="CategoryID" asp-items="ViewBag.Categories" class="form-select">
+            <option value="">Hepsi</option>
+        </select>
+        <span asp-validation-for="CategoryID"></span>
+
+    </div>
+    <div class="mb-3 form-check">
+        <input asp-for="isActive" class="form-check-input">
+        <label asp-for="isActive" class="form-check-label"></label>
+        <span asp-validation-for="isActive"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-success">Kaydet</button>
+
+</form>
